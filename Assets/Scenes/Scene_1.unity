@@ -2073,7 +2073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pools:
-  - prefab: {fileID: 2599566347130427398, guid: 73596238b8bc2574190474fbdc98d628, type: 3}
+  - prefab: {fileID: 2860735776433114931, guid: 0b54af0ff9afca54bba87bafc47cc2d6, type: 3}
     maximumInstances: 20
     poolType: 5
     pool: {fileID: 0}
@@ -2805,7 +2805,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29646d9f8e534c84195f8cbc47ad20be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
 --- !u!4 &1961935257
 Transform:
   m_ObjectHideFlags: 0

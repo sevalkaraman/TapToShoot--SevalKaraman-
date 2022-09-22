@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-    public GameObject projectile;
-    
     private Camera _mainCam;
     private IShootable _currentTarget;
     private Vector3 _shootPosition;
@@ -52,8 +50,9 @@ public class Shooter : MonoBehaviour
 
     private void Shoot(IShootable target)
     {
-        var newProjectile = PoolManager.Instance.Spawn(Pools.Types.Projectile, _shootPosition - new Vector3(0f, 0f, 20f), Quaternion.identity);
-        newProjectile.transform.DOMoveZ(_shootPosition.z, 0.5f);
+        var newProjectile =
+            PoolManager.Instance.Spawn(Pools.Types.Projectile, _shootPosition - new Vector3(0f, 0f, 20f), Quaternion.identity).GetComponent<Projectile>();
+        newProjectile.MoveToTarget(_shootPosition);
         _currentTarget = null;
     }
 }
