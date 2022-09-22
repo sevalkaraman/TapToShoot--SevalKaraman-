@@ -19,6 +19,7 @@ public abstract class Projectile : MonoBehaviour
         {
             Damage(iShootable);
             DespawnProjectile();
+            GlobalEvents.Instance.OnProjectileHit();
         }
     }
 
