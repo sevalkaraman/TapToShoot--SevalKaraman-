@@ -7,6 +7,7 @@ public abstract class Projectile : MonoBehaviour
     public Pools.Types type;
     
     public abstract void Damage(IShootable shootable);
+    public abstract void AddForce(Cube shootable);
     public void MoveToTarget(Vector3 targetPos)
     {
         transform.DOMoveZ(targetPos.z, 1f / speed );

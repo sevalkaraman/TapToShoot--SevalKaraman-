@@ -5,6 +5,7 @@ using Random = UnityEngine.Random;
 public class Cube : MonoBehaviour , IShootable
 {
     private MeshRenderer _renderer;
+    public Rigidbody rb;
 
     private void OnDisable()
     {
@@ -14,6 +15,7 @@ public class Cube : MonoBehaviour , IShootable
     private void Start()
     {
         _renderer = transform.GetChild(0).GetComponent<MeshRenderer>();
+        rb = GetComponent<Rigidbody>();
         GlobalEvents.Instance.onProjectileHit += GetRandomColor;
         GetRandomColor();
     }
@@ -21,6 +23,10 @@ public class Cube : MonoBehaviour , IShootable
     
     public void GetDamage()
     {
+    }
+    public void GetForce()
+    {
+      
     }
 
     public void GetRandomColor()
