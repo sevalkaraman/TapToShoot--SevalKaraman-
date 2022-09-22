@@ -1,9 +1,9 @@
 
 public class Bullet : Projectile
 {
-    public override void Damage()
+
+    public override void Damage(IShootable shootable)
     {
-        print("bullet damage");
+        shootable.GetDamage();
     }
-    
 }

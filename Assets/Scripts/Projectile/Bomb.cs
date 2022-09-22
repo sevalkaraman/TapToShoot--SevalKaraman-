@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Bomb : Projectile
 {
-    public override void Damage()
+    public override void Damage(IShootable shootable)
     {
-        print("bomb damage");
+        shootable.GetDamage();
     }
 }

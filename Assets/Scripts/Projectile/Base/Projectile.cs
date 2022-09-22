@@ -6,7 +6,7 @@ public abstract class Projectile : MonoBehaviour
     public float speed = 2f;
     public Pools.Types type;
     
-    public abstract void Damage();
+    public abstract void Damage(IShootable shootable);
     public void MoveToTarget(Vector3 targetPos)
     {
         transform.DOMoveZ(targetPos.z, 1f / speed );
@@ -17,7 +17,7 @@ public abstract class Projectile : MonoBehaviour
         var iShootable = other.GetComponent<IShootable>();
         if (iShootable != null)
         {
-            Damage();
+            Damage(iShootable);
             DespawnProjectile();
         }
     }
