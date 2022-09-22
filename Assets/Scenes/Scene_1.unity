@@ -2077,6 +2077,10 @@ MonoBehaviour:
     maximumInstances: 20
     poolType: 5
     pool: {fileID: 0}
+  - prefab: {fileID: 2860735776433114931, guid: f89bfd53ab2d33d40b7f0688bd44d88e, type: 3}
+    maximumInstances: 20
+    poolType: 10
+    pool: {fileID: 0}
 --- !u!4 &1604537812
 Transform:
   m_ObjectHideFlags: 0

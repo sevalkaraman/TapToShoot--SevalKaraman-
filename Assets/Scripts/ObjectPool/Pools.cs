@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Pools : MonoBehaviour
 {
     public enum Types
     {
-        Projectile = 5,
+        Bullet = 5,
+        Bomb = 10,
     }
 
     public static string GetTypeStr(Types poolType)
