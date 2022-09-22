@@ -9,7 +9,7 @@ public class WallCreator : MonoBehaviour
     public int yCount = 4;
     public float size = 1;
 
-    private List<GameObject> _cubes = new List<GameObject>();
+    public List<GameObject> _cubes = new List<GameObject>();
 
     [ContextMenu("Place Cubes")]
     public void PlaceCubes()
@@ -30,6 +30,7 @@ public class WallCreator : MonoBehaviour
         {
             DestroyImmediate(child);
         }
+        _cubes.Clear();
     }
     private void SetCubesPositions()
     {
