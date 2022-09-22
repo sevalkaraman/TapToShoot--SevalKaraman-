@@ -52,7 +52,7 @@ public class Shooter : MonoBehaviour
 
     private void Shoot(IShootable target)
     {
-        var newProjectile = Instantiate(projectile, _shootPosition - new Vector3(0f, 0f, 20f), Quaternion.identity);
+        var newProjectile = PoolManager.Instance.Spawn(Pools.Types.Projectile, _shootPosition - new Vector3(0f, 0f, 20f), Quaternion.identity);
         newProjectile.transform.DOMoveZ(_shootPosition.z, 0.5f);
         _currentTarget = null;
     }
