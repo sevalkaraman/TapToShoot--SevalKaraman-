@@ -10,7 +10,7 @@ public abstract class Projectile : MonoBehaviour
     public abstract void AddForce(Cube shootable);
     public void MoveToTarget(Vector3 targetPos)
     {
-        transform.DOMoveZ(targetPos.z, 1f / speed );
+        transform.DOMoveZ(targetPos.z + 5f, 1f / speed );
     }
 
     private void OnTriggerEnter(Collider other)
