@@ -2,10 +2,13 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
+    [SerializeField] private GameManager _gameManager;
+    
     private Camera _mainCam;
     private IShootable _currentTarget;
     private Vector3 _shootPosition;
     private Pools.Types _projectileType;
+    
     
     private void Start()
     {
@@ -29,7 +32,7 @@ public class Shooter : MonoBehaviour
 
     private void CheckShootable()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && _gameManager.GameState.Equals(GameState.Game))
         {
             RaycastHit hit;
             if (Physics.Raycast(SendRay(), out hit, 1000f))

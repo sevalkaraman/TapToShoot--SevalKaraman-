@@ -644,6 +644,7 @@ MonoBehaviour:
   _wallCreator: {fileID: 318448645}
   _canvasPanels: {fileID: 1920028145}
   _cubes: []
+  _gameState: 0
 --- !u!1 &854513656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1780,6 +1781,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4002034634747137163, guid: 03c6076e417790e418e2b910a7a4105b, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 715687602}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03c6076e417790e418e2b910a7a4105b, type: 3}
 --- !u!1001 &5963527167186673640

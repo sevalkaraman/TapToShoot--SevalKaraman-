@@ -8,6 +8,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private WallCreator _wallCreator;
     [SerializeField] private CanvasPanels _canvasPanels;
     [SerializeField] private List<Cube> _cubes = new List<Cube>();
+    [SerializeField] private GameState _gameState;
+    public GameState GameState
+    {
+        get => _gameState;
+    }
     
     private void OnDisable()
     {
@@ -16,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        _gameState = GameState.Game;
         foreach (GameObject cube in _wallCreator._cubes)
         {
             var shootableCube = cube.GetComponent<Cube>();
@@ -32,5 +38,12 @@ public class GameManager : MonoBehaviour
             if(!cube.IsShooted) return;
         } 
         _canvasPanels.ShowLevelCompletedPanel();
+        _gameState = GameState.LevelEnd;
     }
+}
+
+public enum GameState
+{
+    Game,
+    LevelEnd,
 }
