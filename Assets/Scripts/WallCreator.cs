@@ -40,7 +40,7 @@ public class WallCreator : MonoBehaviour
             {
                 var newCube = Instantiate(cube, parent);
                 newCube.transform.localScale = Vector3.one * size;
-                newCube.transform.localPosition = new Vector3( j * size, i * -size, 0f);
+                newCube.transform.localPosition = new Vector3( j -(size / 2 * (xCount - 1)), (size / 2 * (yCount - 1)) - i , 0f);
             }
         }
     }

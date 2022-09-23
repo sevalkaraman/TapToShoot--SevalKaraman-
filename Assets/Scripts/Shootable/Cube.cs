@@ -28,10 +28,6 @@ public class Cube : MonoBehaviour , IShootable
     {
         _isShooted = true;
     }
-    public void GetForce()
-    {
-      
-    }
 
     public void GetRandomColor()
     {
